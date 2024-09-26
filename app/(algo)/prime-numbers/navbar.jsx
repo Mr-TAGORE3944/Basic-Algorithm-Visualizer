@@ -1,31 +1,23 @@
+import Link from "next/link";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   render() {
     return (
-      <nav className="w-full h-fit lg:px-4 lg:py-2 p-1 lg:flex justify-between  hidden ">
+      <nav
+        className="w-full h-fit lg:px-4 lg:py-2 p-1 lg:flex 
+      gap-8 hidden "
+      >
         <span className="lg:font-bold  whitespace-normal tracking-wide uppercase text-center  hidden lg:block">
           Sieve
         </span>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <Link
+          href="/"
+          className="bg-sky-500 rounded-lg text-white font-bold px-2"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* <Link to={"/"}>
-                        <span style={{color:"white"}}>
-                            Home
-                        </span>
-                    </Link> */}
-        </div>
+          <span>Home</span>
+        </Link>
       </nav>
     );
   }
