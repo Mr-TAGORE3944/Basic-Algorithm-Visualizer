@@ -7,7 +7,7 @@ class Cell extends Component {
       <div className={this.getClassName()} style={this.getStyled()}>
         {this.props.cell.isPresent && (
           <Image
-            src="/queen.png"
+            src="/queen.jpg"
             height={100}
             width={100}
             style={{ padding: "25px" }}
