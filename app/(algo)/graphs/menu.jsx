@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SimpleSelect from "./simpleSelect";
+import Link from "next/link";
 
 class Menu extends Component {
   render() {
@@ -17,6 +18,12 @@ class Menu extends Component {
         {/*    onCountChange={this.props.onSpeedChange}*/}
         {/*    disable={false}*/}
         {/*/>*/}
+        <Link
+          href="/"
+          className="bg-sky-500 rounded-lg text-white font-bold px-2 lg:hidden"
+        >
+          <span>Home</span>
+        </Link>
         <div className="flex flex-row">
           <SimpleSelect
             pos={0}

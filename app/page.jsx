@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,7 +6,7 @@ const algorithms = [
   {
     name: "Shortest Path",
     description: "Visualize the Shortest path algorithm.",
-    link: "#",
+    link: "/pathfinderComponents",
     img: "/graph.png",
   },
   {
@@ -50,21 +49,22 @@ const AlgorithmCard = ({ algorithm }) => (
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100  w-full">
-      <header className="text-center mb-12 bg-green-500 w-full py-5">
-        <h1 className="text-4xl font-bold text-white tracking-wider">
-          Algorithm Visualizer
-        </h1>
-        <p className="text-lg text-white tracking-wide mt-4">
-          Explore and understand algorithms through visualizations
-        </p>
-      </header>
-
-      <section className="flex flex-wrap justify-evenly gap-8">
-        {algorithms.map((algo, index) => (
-          <AlgorithmCard key={index} algorithm={algo} />
-        ))}
-      </section>
-    </div>
+    <>
+      <div className="flex flex-col items-center min-h-screen bg-gray-100  w-full">
+        <header className="text-center mb-12 bg-green-500 w-full py-5">
+          <h1 className="text-4xl font-bold text-white tracking-wider">
+            Algorithm Visualizer
+          </h1>
+          <p className="text-lg text-white tracking-wide mt-4">
+            Explore and understand algorithms through visualizations
+          </p>
+        </header>
+        <section className="flex flex-wrap justify-evenly gap-8">
+          {algorithms.map((algo, index) => (
+            <AlgorithmCard key={index} algorithm={algo} />
+          ))}
+        </section>
+      </div>
+    </>
   );
 }
