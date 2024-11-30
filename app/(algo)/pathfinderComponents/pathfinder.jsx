@@ -3,11 +3,11 @@ import React, { Component, Fragment } from "react";
 import Grid from "./grid";
 import Navbar from "./navbar";
 import Menu from "./menu";
-import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
-import { getMaze } from "../algorithms/recursiveMaze";
-import { bfsdfs } from "../algorithms/bfs";
-import { randomMaze } from "../algorithms/randomMaze";
-import { aStar } from "../algorithms/Astar";
+import { dijkstra, getNodesInShortestPathOrder } from "./dijkstra";
+import { getMaze } from "./recursiveMaze";
+import { bfsdfs } from "./bfs";
+import { randomMaze } from "./randomMaze";
+import { aStar } from "./Astar";
 
 class Pathfinder extends Component {
   constructor() {
